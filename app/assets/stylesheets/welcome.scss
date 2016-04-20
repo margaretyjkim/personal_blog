@@ -1,3 +1,28 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+}
+
+.navbar{
+	text-align: center;
+}
+.redDiv {
+	background-color: red;
+	height: 500px;
+}
+.orangeDiv {
+	background-color: orange;
+	height: 500px;
+}
+.yellowDiv {
+	background-color: yellow;
+	height: 500px;
+}
+.greenDiv {
+	background-color: green;
+	height: 500px;
+}
