@@ -1,6 +1,8 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Initialize
 * {
 	box-sizing: border-box;
 }
@@ -10,13 +12,25 @@ html, body, p, h1, h2, h3, ul {
 	padding: 0;
 }
 
+img {
+	max-width: 100%;
+	display: block;
+	//to fit the picture in the div without getting it distorted
+	object-fit: cover;
+}
+
+//UI Library
+$header-font: Open Sans, san-serif;
+$description-font: 'EB Garamond';
+$body-padding: 3%;
+
 html {
-	font-family: 'Open sans';
+	font-family: $header-font;
 	font-weight: 300;
 }
 
 .wrapper {
-	background: white;
+	background-color: white;
 	max-width: 1000px;
 	margin: 0 auto;
 	height: 100vh;
@@ -37,13 +51,19 @@ header{
 .header__nav {
 	list-style-type: none;
 	display: flex;
+
+}
+
+.header__nav a {
+	text-decoration: none;
 }
 
 .header__nav li {
-	margin-left: 30px;
+	margin-left: 35px;
+
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
 	header {
 		flex-direction: column;
 		justify-content: center;
@@ -51,14 +71,15 @@ header{
 
 	.header__brand {
 		margin: auto;
+		font-size: 30px;
 	}
 
 	.header__nav {
 		justify-conent: center;
 	}
 
-	.header__nav li {
-		margin: 0 15px;
+	.header__nav li a {
+		margin: 2% 0 2% 20%;
 	}
 }
 
@@ -70,6 +91,7 @@ header{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	font-size: 36px;
 }
 
 main {
@@ -77,37 +99,65 @@ main {
 }
 
 .about__me {
-	min-height: 150px;
+	min-height: 100px;
+	line-height: 100px;
 	background: #111;
-	font-family: 'EB Garamond';
+	font-family: $description-font;
 	color: white;
-}
-.portfolio__header {
-	background: #222;
-	font-family: 'Open Sans';
-	color: white;
-}
-.portfolio {
-	display: flex;
-	justify-content: space-between;
-	padding: 30px 0;
-	background: #333;
-	font-family: 'Open Sans';
-	color: white;
+	padding: 0 3%;
+	font-size: 50		px;
 }
 
-.portfolio__design__and__development .portfolio__design {
+.portfolio {
+	// display: flex;
+	justify-content: space-between;
+	background: #333;
+	font-family: $header-font;
+	color: white;
+	padding: $body-padding;
+}
+
+.portfolio__design__and__development {
 	flex-basis: 45%;
 	background-color: #111;
 	padding: 25px;
-	font-family: 'Open Sans';
+	font-family: $header-font;
 	color: white;
+	display: flex;
 }
 
-@media screen and (max-width: 700px) {
-	.portfolios {
+.portfolio__design {
+	flex-basis: 45%;
+	background-color: #444;
+	padding: 25px;
+	font-family: $header-font;
+	color: white;
+	display: flex;
+}
+
+.portfolio__description {
+	flex-direction: column;
+	padding: 0 3%;
+
+}
+
+.portfolio__description p{
+	font-family: $description-font;
+	padding: 3% 0;
+}
+@media screen and (max-width: 1000px) {
+	.portfolio {
 		flex-direction: column;
+		padding: 0;
 	}
+
+}
+
+.contact__me {
+	background: #777;
+	padding: 25px;
+	font-family: $header-font;
+	color: white;
 }
 
 footer {
