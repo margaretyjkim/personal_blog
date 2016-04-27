@@ -1,9 +1,6 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$body-height: 500px;
-$body-padding: 3%;
-
 * {
 	box-sizing: border-box;
 }
@@ -11,11 +8,10 @@ $body-padding: 3%;
 html, body, p, h1, h2, h3, ul {
 	margin:0;
 	padding: 0;
-	height: $body-height;
 }
 
 html {
-	font-family: san-serif;
+	font-family: 'Open sans';
 	font-weight: 300;
 }
 
@@ -33,32 +29,89 @@ header{
 	padding: 20px 0;
 	flex-shrink: 0;
 }
-.intro {
-	background-color: #C7EFCF;
-	padding: $body-padding;
+
+.header__brand {
+	margin-right: auto;
 }
-.aboutme {
-	background-color: #F0B67F;
-	padding: $body-padding;
+
+.header__nav {
+	list-style-type: none;
+	display: flex;
+}
+
+.header__nav li {
+	margin-left: 30px;
+}
+
+@media screen and (max-width: 700px) {
+	header {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.header__brand {
+		margin: auto;
+	}
+
+	.header__nav {
+		justify-conent: center;
+	}
+
+	.header__nav li {
+		margin: 0 15px;
+	}
+}
+
+.hero {
+	background: #333;
+	color: white;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	flex-grow: 1;
+}
+
+.about__me {
+	min-height: 150px;
+	background: #111;
+	font-family: 'EB Garamond';
+	color: white;
+}
+.portfolio__header {
+	background: #222;
+	font-family: 'Open Sans';
+	color: white;
 }
 .portfolio {
-	background-color: red;
-	padding: $body-padding;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+	background: #333;
+	font-family: 'Open Sans';
+	color: white;
 }
-.mobile {
-	background-color: #EEF5DB;
-	padding: $body-padding;
+
+.portfolio__design__and__development .portfolio__design {
+	flex-basis: 45%;
+	background-color: #111;
+	padding: 25px;
+	font-family: 'Open Sans';
+	color: white;
 }
-.web {
-	background-color: yellow;
-	padding: $body-padding;
-}
-.contactme {
-	background-color: green;
-	padding: $body-padding;
+
+@media screen and (max-width: 700px) {
+	.portfolios {
+		flex-direction: column;
+	}
 }
 
 footer {
-	background-color: #61636A;
-	height: 60px;
+	padding: 20px;
+	text-align: center;
+	flex-shrink: 0;
 }
