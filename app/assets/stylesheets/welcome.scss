@@ -125,30 +125,33 @@ main {
 	// background: rgba(250,202,0,0.9);
 	background: #e5f6fb;
 	font-family: $header-font;
-	color: white;
+	color: #333;
 	padding: $body-padding;
 }
 
 .portfolio__design__and__development {
 	flex-basis: 45%;
 	// background-color: rgba(240,22,82,0.9);
-	background: #4cc2e7;
+	background: #e5f6fb;
 	padding: 25px;
 	font-family: $header-font;
-	color: white;
+	color: #333;
 	display: flex;
 }
 
 .portfolio__design {
 	flex-basis: 45%;
-	background: #66cbea;
+	background: #e5f6fb;
 	padding: 25px;
 	font-family: $header-font;
-	color: white;
+	color: #333;
 	display: flex;
 }
+.portfolio__design__happytribe__live {
+	width: 1000px;
+}
 
-.portfolio__design__image {
+.portfolio__design__superhero {
 	width: 500px;
 }
 
