@@ -34,8 +34,6 @@ html {
 	max-width: 1000px;
 	margin: 0 auto;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
 }
 
 header{
@@ -46,12 +44,13 @@ header{
 
 .header__brand {
 	margin-right: auto;
+	height: 50px;
+	line-height: 50px;
 }
 
 .header__nav {
 	list-style-type: none;
 	display: flex;
-
 }
 
 .header__nav a {
@@ -60,19 +59,14 @@ header{
 
 .header__nav li {
 	margin-left: 35px;
-
+	height: 50px;
+	line-height: 50px;
 }
 
-// .header__contact__button {
-// 	height: 30px;
-// 	width: 70px;
-// 	border-radius: 10px;
-// 	text-align: center;
-// 	font-size: 20px;
-// 	background-color: #FFF;
-// 	border-width: 5px 5px 5px 5px;
-// 	border-image: url(assets/images/jButton.png) 13% 9% repeat;
-// }
+.header__contact__button {
+	height: 50px;
+	width: 150px;
+}
 @media screen and (max-width: 1000px) {
 	header {
 		flex-direction: column;
@@ -122,7 +116,7 @@ main {
 .portfolio {
 	// display: flex;
 	justify-content: space-between;
-	// background: rgba(250,202,0,0.9);
+
 	background: #e5f6fb;
 	font-family: $header-font;
 	color: #333;
@@ -130,8 +124,6 @@ main {
 }
 
 .portfolio__design__and__development {
-	flex-basis: 45%;
-	// background-color: rgba(240,22,82,0.9);
 	background: #e5f6fb;
 	padding: 25px;
 	font-family: $header-font;
@@ -140,7 +132,6 @@ main {
 }
 
 .portfolio__design {
-	flex-basis: 45%;
 	background: #e5f6fb;
 	padding: 25px;
 	font-family: $header-font;
@@ -156,7 +147,6 @@ main {
 }
 
 .portfolio__description {
-	flex-direction: column;
 	padding: 0 3%;
 
 }
@@ -164,13 +154,6 @@ main {
 .portfolio__description p{
 	font-family: $description-font;
 	padding: 3% 0;
-}
-@media screen and (max-width: 1000px) {
-	.portfolio {
-		flex-direction: column;
-		padding: 0;
-	}
-
 }
 
 .contact__me {
@@ -181,7 +164,7 @@ main {
 }
 
 footer {
-	padding: 20px;
 	text-align: center;
-	flex-shrink: 0;
+	height: 60px;
+	line-height: 60px;
 }
