@@ -1,15 +1,12 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 // Initialize
 * {
 	box-sizing: border-box;
 }
 
-html, body, p, h1, h2, h3, ul {
+html, body, p, h1, h2, ul {
 	margin:0;
 	padding: 0;
+	letter-spacing: 0.6px;
 }
 
 img {
@@ -21,8 +18,8 @@ img {
 
 //UI Library
 $header-font: Open Sans, san-serif;
-$description-font: 'EB Garamond';
-$body-padding: 3%;
+$description-font: 'EB Garamond', serif;
+$body-padding: 5% 10%;
 
 html {
 	font-family: $header-font;
@@ -31,14 +28,13 @@ html {
 
 .wrapper {
 	background-color: white;
-	max-width: 1000px;
 	margin: 0 auto;
 	height: 100vh;
 }
 
 header{
 	display: flex;
-	padding: 20px 0;
+	padding: 10px 3% 10px 3%;
 	flex-shrink: 0;
 }
 
@@ -46,6 +42,7 @@ header{
 	margin-right: auto;
 	height: 50px;
 	line-height: 50px;
+	letter-spacing: 1px;
 }
 
 .header__nav {
@@ -63,10 +60,10 @@ header{
 	line-height: 50px;
 }
 
-.header__contact__button {
-	height: 50px;
-	width: 150px;
+.header__contact__button li {
+	width: 100px;
 }
+
 @media screen and (max-width: 1000px) {
 	header {
 		flex-direction: column;
@@ -75,11 +72,11 @@ header{
 
 	.header__brand {
 		margin: auto;
-		font-size: 30px;
+		font-size: 22px;
 	}
 
 	.header__nav {
-		justify-conent: center;
+		justify-content: center;
 	}
 
 	.header__nav li a {
@@ -98,26 +95,19 @@ header{
 	font-size: 36px;
 }
 
-main {
-	flex-grow: 1;
-}
-
 .about__me {
 	min-height: 100px;
 	line-height: 100px;
-	background: #0087b0;
-	// background: rgba(240,22,82,0.9);
-	font-family: $description-font;
-	color: white;
-	padding: 0 3%;
-	font-size: 25px;
+	// background: #0087b0;
+	background: #e5f6fb;
+	font-family: $header-font;
+	color: #333;
+	font-size: 22px;
+	text-align: center;
 }
 
 .portfolio {
-	// display: flex;
-	justify-content: space-between;
-
-	background: #e5f6fb;
+	background: white;
 	font-family: $header-font;
 	color: #333;
 	padding: $body-padding;
@@ -125,7 +115,6 @@ main {
 
 .portfolio__design__and__development {
 	background: #e5f6fb;
-	padding: 25px;
 	font-family: $header-font;
 	color: #333;
 	display: flex;
@@ -133,27 +122,32 @@ main {
 
 .portfolio__design {
 	background: #e5f6fb;
-	padding: 25px;
 	font-family: $header-font;
 	color: #333;
 	display: flex;
 }
 .portfolio__design__happytribe__live {
-	width: 1000px;
+	width: 50%;
 }
 
 .portfolio__design__superhero {
-	width: 500px;
+	width: 20%;
 }
 
 .portfolio__description {
 	padding: 0 3%;
-
 }
 
 .portfolio__description p{
 	font-family: $description-font;
-	padding: 3% 0;
+	letter-spacing: 0.8px;
+	line-height: 1.6;
+}
+
+@media screen and (max-width: 1300px) {
+	.portfolio__design__happytribe__live {
+		width: 500px;
+	}
 }
 
 .contact__me {
