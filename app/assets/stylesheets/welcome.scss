@@ -3,7 +3,7 @@
 	box-sizing: border-box;
 }
 
-html, body, p, h1, h2, ul {
+html, body, p, h1, h2, h3, ul {
 	margin:0;
 	padding: 0;
 	letter-spacing: 0.6px;
@@ -60,6 +60,10 @@ header{
 	line-height: 50px;
 }
 
+a:visited {
+	color: tomato;
+}
+
 .header__contact__button li {
 	width: 100px;
 }
@@ -114,14 +118,14 @@ header{
 }
 
 .portfolio__design__and__development {
-	background: #e5f6fb;
+	// background: #e5f6fb;
 	font-family: $header-font;
 	color: #333;
 	display: flex;
 }
 
 .portfolio__design {
-	background: #e5f6fb;
+	// background: #e5f6fb;
 	font-family: $header-font;
 	color: #333;
 	display: flex;
@@ -148,6 +152,18 @@ header{
 	.portfolio__design__happytribe__live {
 		width: 500px;
 	}
+}
+
+.contact li{
+	display: inline;
+	text-decoration: none;
+	width: 100px;
+}
+
+.contact img{
+	display: inline;
+	text-decoration: none;
+	width: 100px;
 }
 
 .contact__me {
